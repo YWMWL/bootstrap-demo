@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>某管理系统</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<style>
+      body {
+          padding-top: 50px;/*有顶部固定导航条时设置*/
+          padding-bottom: 50px;/*有底部固定导航条时设置*/
+          color: #5a5a5a;
+      }
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        background-color: #ddd;
+        border-right: 1px solid #eee;
+    }
+    .nav-sidebar {
+        margin-right: -21px;
+        margin-bottom: 20px;
+        margin-left: -20px;
+    }   
+    .nav-sidebar > li > a {
+        padding-right: 20px;
+        padding-left: 20px;
+    }    
+    .nav-sidebar > .active > a,
+    .nav-sidebar > .active > a:hover,
+    .nav-sidebar > .active > a:focus {
+        color: #fff;
+        background-color: #428bca;
+    }     
+    .main {
+        padding: 20px;
+    }
+
+    .main .page-header {
+        margin-top: 0;
+    }    
+</style>
+
+</head>
+
+<body>
+      <!-- navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+               <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                 <span class="sr-only">管理系统</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+               <a href="##" class="navbar-brand">管理系统</a>
+          </div> 
+          <div class="collapse navbar-collapse navbar-responsive-collapse">
+              <ul class="nav navbar-nav">
+                    <li class="active"><a href="##">首页</a></li>
+                    <li class="dropdown">
+                      <a href="##" data-toggle="dropdown" class="dropdown-toggle">功能<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#Chrome">管理建立</a></li>
+                          <li><a href="#Firefox">管理查询</a></li>
+                          <li><a href="#Opera">管理设置</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#Safari">设置</a></li>
+                          <li><a href="#IE">帮助</a></li>
+                        </ul>   
+                    </li>
+                    <li><a href="##" data-toggle="modal" data-target="#myModal">帮助</a></li>
+               </ul>
+               <form action="##" class="navbar-form navbar-right">
+                   <div class="form-group">
+                      <input type="text" class="form-control" placeholder="用户名" />
+                      <input type="text" class="form-control" placeholder="密码" />
+                   </div>
+                <button type="submit" class="btn btn-default">登录</button>
+               </form>                  
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                  <li class="active"><a>首页</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                  <li><a>管理建立</a></li>
+                  <li><a>管理查询</a></li>
+                  <li><a>管理设置</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">  
+                  <li><a>设置</a></li>
+                  <li><a>帮助</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                  <h1 class="page-header">管理控制台</h1>
+                  <p>
+                    <button class="btn btn-lg btn-default">操作1</button>
+                    <button class="btn btn-lg btn-primary">操作2</button>
+                    <button class="btn btn-lg btn-success">操作3</button>
+                    <button class="btn btn-lg btn-info">操作4</button>
+                    <button class="btn btn-lg btn-warning">操作5</button>
+                    <button class="btn btn-lg btn-danger">操作6</button>
+                  </p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="panel panel-primary">
+                          <div class="panel-heading">最新提醒</div>
+                          <div class="panel-body">
+                            <div class="alert alert-success" role="alert">恭喜您操作成功！</div>
+                            <div class="alert alert-warning" role="alert">您已操作失败两次，还有最后一次机会</div>
+                            <div class="alert alert-danger" role="alert">对不起，您输入的密码有误</div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="panel panel-primary">
+                          <div class="panel-heading">我的任务</div>
+                          <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked">
+                              <li>
+                                <a href="#" class="alert alert-info">订单审批<span class="badge pull-right">42</span></a>
+                              </li>
+                              <li>
+                                <a href="#" class="alert alert-info">订单审批<span class="badge pull-right">42</span></a>
+                              </li>
+                              <li>
+                                <a href="#" class="alert alert-info">订单审批<span class="badge pull-right">42</span></a>
+                              </li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="panel panel-primary">
+                          <div class="panel-heading">最新订单</div>
+                          <div class="panel-body">
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <th>#</th>
+                                  <th>产品</th>
+                                  <th>数量</th>
+                                  <th>总金额</th>
+                                  <th>业务员</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Apple Macbook air</td>
+                                  <td>10</td>
+                                  <td>80000</td>
+                                  <td>王小贱</td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Apple Macbook air</td>
+                                  <td>10</td>
+                                  <td>80000</td>
+                                  <td>王小贱</td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Apple Macbook air</td>
+                                  <td>10</td>
+                                  <td>80000</td>
+                                  <td>王小贱</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <a class="btn btn-primary" href="#" role="button">查看详细 &raquo;</a>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="panel panel-primary">
+                          <div class="panel-heading">工程进度</div>
+                          <div class="panel-body">
+                            <h3><span class="label label-sm label-primary">水井挖掘工程</span></h3>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 60%"><span class="sr-only">80</span>
+                                </div>
+                            </div>
+                            <h3><span class="label label-sm label-danger">基建工程</span></h3>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger" style="width: 80%"><span class="sr-only">80</span>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
